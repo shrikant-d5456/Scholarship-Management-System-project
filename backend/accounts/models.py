@@ -5,6 +5,8 @@ from django.core.validators import RegexValidator
 from django.contrib.auth.models import AbstractBaseUser 
 from portal.base import BaseModel
 from django.contrib.auth.models import User
+from schools.models import Schools
+
 
 class User(AbstractBaseUser):
     id        = models.UUIDField(primary_key=True, default=uuid4)
@@ -16,9 +18,13 @@ class User(AbstractBaseUser):
                 regex=r'^[0-9+]*$',
                 message="Enter a valid phone number with numbers and '+' only",
             )]
-        )    
+        )   
+    ROLES = (
+        ('principal', 'Principal'),
+        ('hq', 'Headquarters'),
+    )
     full_name = models.CharField(max_length=128)
-    user_type = models.CharField(max_length=10, default='ADMIN')
+    user_type = models.CharField(max_length=10, default='ADMIN', choices=ROLES)
     gender    = models.CharField(max_length=10, default='MALE')
     email     = models.EmailField(max_length=255, unique=True, blank=True, null=True)
     is_active = models.BooleanField(default=True)
@@ -56,5 +62,9 @@ class User(AbstractBaseUser):
         return self.is_admin
 
 
+class PrincipleSchool(BaseModel):
+    principle= models.ForeignKey(User,on_delete=models.CASCADE)
+    school = models.ForeignKey(Schools,on_delete=models.CASCADE)
 
-    
+
+

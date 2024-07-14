@@ -1,8 +1,9 @@
+from django import forms
 from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .forms import UserChangeForm, UserCreationForm
-from accounts.models import User
+from accounts.models import User, PrincipleSchool 
 
 
 class MyUserAdmin(BaseUserAdmin):
@@ -30,11 +31,23 @@ class MyUserAdmin(BaseUserAdmin):
     ordering = ('phone', 'email', )
     filter_horizontal = ()
 
-class UserVehicleAdmin(admin.ModelAdmin):
-    list_display =["user","vehicle","registration_number"]
+class PrincipleForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(PrincipleForm, self).__init__(*args, **kwargs)
+        self.fields['principle'].queryset = User.objects.filter(user_type='principal')
 
-class BatteryBookingAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user', 'swapping_station', 'status', 'estimated_arrival_time', 'time_to_swap', 'swap_done_time') 
+    class Meta:
+        model = PrincipleSchool
+        fields = ('principle','school')
 
+class PrincipleAdmin(admin.ModelAdmin):
+    list_display =['principle','school']
+    form = PrincipleForm
+    
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        return qs.filter(principle__user_type='principal')
+    
 admin.site.register(User, MyUserAdmin)
 admin.site.unregister(Group)
+admin.site.register(PrincipleSchool, PrincipleAdmin)
