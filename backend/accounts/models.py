@@ -18,7 +18,7 @@ class User(AbstractBaseUser):
             )]
         )    
     full_name = models.CharField(max_length=128)
-    user_type = models.CharField(max_length=10, default='ADMIN')
+    user_type = models.CharField(max_length=10, default='ADMIN', choices=('principle','headquarter','ADMIN'))
     gender    = models.CharField(max_length=10, default='MALE')
     email     = models.EmailField(max_length=255, unique=True, blank=True, null=True)
     is_active = models.BooleanField(default=True)
