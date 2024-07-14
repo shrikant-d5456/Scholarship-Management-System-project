@@ -37,6 +37,8 @@ INSTALLED_APPS = [
 
 
     'accounts',
+    'schools',
+    'students',
     'portal',
 ]
 

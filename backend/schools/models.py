@@ -4,5 +4,5 @@ from portal.base import BaseModel
 
 class Schools (BaseModel):
     name=models.CharField(max_length=50)
-    code=models.CharField(max_length=50)
+    code=models.CharField(max_length=50, unique=True)
     address=models.CharField(max_length=50)

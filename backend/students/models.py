@@ -7,6 +7,7 @@ class students (BaseModel):
     age = models.IntegerField()
     class_name = models.CharField(max_length=20)
     school = models.ForeignKey(Schools,on_delete=models.CASCADE)
+    roll_number = models.CharField(max_length=50, unique=True, default='01')
 
 class marks (BaseModel):
     student = models.ForeignKey(students, on_delete=models.CASCADE)
