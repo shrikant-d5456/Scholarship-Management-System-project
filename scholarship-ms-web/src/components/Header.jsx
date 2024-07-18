@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
 
-  const if_user_exist = false;
+  const if_user_exist = true;
 
   const [menu, setMenu] = useState(false);
   const path = useLocation().pathname;

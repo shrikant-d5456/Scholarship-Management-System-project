@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes, Link , useLocation} from 'react-router-dom';
-import { BsBank, BsClipboardDataFill, BsDatabaseFillAdd, BsFileEarmarkArrowUpFill, BsPersonVcardFill, BsSliders2 } from "react-icons/bs";
+import { BsBank, BsClipboardDataFill, BsDatabaseFillAdd, BsFileEarmarkArrowUpFill, BsPersonVcardFill, BsSliders2, BsGrid1X2Fill } from "react-icons/bs";
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Student_data from '../Teacher_pages/Student_data';
@@ -9,6 +9,7 @@ import Submission_status from '../Teacher_pages/Submission_status';
 import Upload_ans_sheet from '../Teacher_pages/Upload_ans_sheet';
 import View_student from '../Teacher_pages/View_student';
 import Setting from "../Teacher_pages/Setting";
+import Home from '../Teacher_pages/Home';
 
 
 const TDashboard = () => {
@@ -23,11 +24,16 @@ const TDashboard = () => {
     BsPersonVcardFill: BsPersonVcardFill,
     BsSliders2: BsSliders2,
     BsBank: BsBank,
+    BsGrid1X2Fill:BsGrid1X2Fill,
     
   };
 
   const arr = [
-    
+    {
+      path_icon:"BsGrid1X2Fill",
+      path_name:"Dashboard",
+      path_link :"/dash/teacher_dashboard",
+    },
     {
       path_icon:"BsClipboardDataFill",
       path_name:"Add Student Data",
@@ -87,6 +93,7 @@ const TDashboard = () => {
 
         <div className='md:w-[80%] w-full p-2'>
           <Routes>
+            <Route path="/teacher_dashboard" element={<Home/>} />
             <Route path="/student_data" element={<Student_data />} />
             <Route path="/monthly_data" element={<Monthly_data />} />
             <Route path="/submission_status" element={<Submission_status />} />

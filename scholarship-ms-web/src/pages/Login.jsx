@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BsPersonFillLock,BsKeyFill,BsEnvelopeArrowUpFill } from 'react-icons/bs'
 import img1 from "../assets/bgimg.jpg"
+import {Link} from 'react-router-dom'
 
 const Login = () => {
 
@@ -34,9 +35,11 @@ const Login = () => {
                 <option value="option3">Option 3</option>
               </select>
 
+              <Link to="/dash">
               <button type='submit' className='bg-[#269CFF] my-4 font-semibold w-full outline-none text-white py-2 px-4 rounded-full'
               >Log In
               </button>
+              </Link>
 
             </form>
           </div>
