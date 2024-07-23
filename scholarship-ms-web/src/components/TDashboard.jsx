@@ -9,7 +9,9 @@ import Submission_status from '../Teacher_pages/Submission_status';
 import Upload_ans_sheet from '../Teacher_pages/Upload_ans_sheet';
 import View_student from '../Teacher_pages/View_student';
 import Setting from "../Teacher_pages/Setting";
-import Home from '../Teacher_pages/Home';
+import Dashboard from '../Teacher_pages/Dashboard';
+import EditProfile from '../Teacher_pages/EditProfile';
+import Notify from '../Teacher_pages/Notify';
 
 
 const TDashboard = () => {
@@ -32,7 +34,7 @@ const TDashboard = () => {
     {
       path_icon:"BsGrid1X2Fill",
       path_name:"Dashboard",
-      path_link :"/dash/teacher_dashboard",
+      path_link :"/dash/",
     },
     {
       path_icon:"BsClipboardDataFill",
@@ -59,11 +61,11 @@ const TDashboard = () => {
       path_name:"Upload Answer Sheet",
       path_link :"/dash/upload_ans_sheet",
     },
-    {
-      path_icon:"BsSliders2",
-      path_name:"Setting",
-      path_link :"/dash/setting",
-    },
+    // {
+    //   path_icon:"BsSliders2",
+    //   path_name:"Setting",
+    //   path_link :"/dash/setting",
+    // },
   ]
 
   return (
@@ -75,7 +77,7 @@ const TDashboard = () => {
           
           {arr.map((element,index)=>
           (
-            <ul id={index} className='p-1'>
+            <ul key={index} className='p-1'>
 
               <Link to={element.path_link}>
                   <li  className={`w-full flex gap-2 justify-start items-center py-2 px-2 rounded-sm 
@@ -91,15 +93,18 @@ const TDashboard = () => {
 
         </div>
 
-        <div className='md:w-[80%] w-full p-2'>
+        <div className='md:w-[80%] lg:h-screen w-full p-2 overflow-y-scroll scroll-smooth'>
           <Routes>
-            <Route path="/teacher_dashboard" element={<Home/>} />
+            <Route path="/" element={<Dashboard/>} />
             <Route path="/student_data" element={<Student_data />} />
             <Route path="/monthly_data" element={<Monthly_data />} />
             <Route path="/submission_status" element={<Submission_status />} />
             <Route path="/upload_ans_sheet" element={<Upload_ans_sheet />} />
             <Route path="/view_students" element={<View_student />} />
             <Route path="/setting" element={<Setting />} />
+            <Route path="/edit_profile" element={<EditProfile />} />
+            <Route path="/notify" element={<Notify />} />
+
           </Routes>
         </div>
       </div>

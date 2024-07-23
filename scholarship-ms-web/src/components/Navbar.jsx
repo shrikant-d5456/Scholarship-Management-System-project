@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BsJustify, BsBank, BsClipboardDataFill, BsDatabaseFillAdd, BsFileEarmarkArrowUpFill, BsPersonVcardFill, BsSliders2, BsHouseCheckFill } from "react-icons/bs";
+import { BsJustify, BsBank, BsClipboardDataFill, BsDatabaseFillAdd, BsFileEarmarkArrowUpFill, BsPersonVcardFill, BsSliders2, BsGrid1X2Fill, BsBell } from "react-icons/bs";
 
 const Navbar = () => {
   const path = useLocation().pathname;
@@ -13,11 +13,15 @@ const Navbar = () => {
     BsPersonVcardFill: BsPersonVcardFill,
     BsSliders2: BsSliders2,
     BsBank: BsBank,
-
+    BsGrid1X2Fill:BsGrid1X2Fill,
   };
 
   const arr = [
-
+    {
+      path_icon:"BsGrid1X2Fill",
+      path_name:"Dashboard",
+      path_link :"/dash/",
+    },
     {
       path_icon: "BsClipboardDataFill",
       path_name: "Add Student Data",
@@ -61,18 +65,26 @@ const Navbar = () => {
             Navbar
           </div>
 
-          <div className='flex justify-center items-center gap-2'>
+          <div className='flex justify-center items-center gap-4'>
           <p className="md:block hidden">Admin_Username123456789</p>
-            <span className='flex w-8 h-8 rounded-full'>
+            
+            <Link to="/dash/edit_profile">
+            <span onClick={() => setMenu(false)} className='flex w-8 h-8 rounded-full' title='Edit Profile'>
               <img className='w-full h-full object-cover rounded-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgBhcplevwUKGRs1P-Ps8Mwf2wOwnW_R_JIA&s" alt="admin" />
             </span>
+            </Link>
+
+            <Link to='/dash/notify'>
+            <BsBell onClick={() => setMenu(false)} className='text-xl'title="Notifications" />
+            </Link>
+            
           </div>
 
         </div>
       </div>
 
       {menu && (
-        <div className='absolute w-full'>
+        <div className='absolute w-full z-10'>
           <div className='w-full h-screen bg-[#152259] text-white text-sm font-semibold'>
 
             {arr.map((element, index) => (
