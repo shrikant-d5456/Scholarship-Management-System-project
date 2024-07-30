@@ -7,7 +7,7 @@ const Upload_ans_sheet = () => {
       <div className="flex flex-col md:flex-row">
         <main className="flex-1 ">
           <div className="bg-white p-4 rounded shadow">
-            <h2 className="lg:text-2xl text-lg font-bold py-2 mb-6 active flex justify-start items-center gap-2">
+            <h2 className="lg:text-xl text-lg font-bold py-2 mb-6 active flex justify-start items-center gap-2">
             <BsFileEarmarkArrowUpFill/> Upload Answer Sheet
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-4">

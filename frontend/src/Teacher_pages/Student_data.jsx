@@ -6,7 +6,7 @@ const Student_data = () => {
   return (
     <div className="flex justify-center items-center bg-aliceblue">
       <div className="bg-white p-6 rounded-lg shadow-lg w-full ">
-      <h2 className="lg:text-2xl text-lg font-bold py-2 mb-6 active flex justify-start items-center gap-2">
+      <h2 className="lg:text-xl text-lg font-bold py-2 mb-6 active flex justify-start items-center gap-2">
       <BsClipboard2DataFill/> Student Registration
       </h2>
         <form className="grid grid-cols-1 md:grid-cols-2 gap-4">

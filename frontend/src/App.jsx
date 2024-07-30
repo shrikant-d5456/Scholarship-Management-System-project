@@ -5,10 +5,10 @@ function App() {
 
   return (
     <>
-  <main className='lg:text-md text-sm'>
-    <Layout/>
-    </main>
-   
+      <main className='lg:text-md text-sm'>
+        <Layout />
+      </main>
+
     </>
   )
 }

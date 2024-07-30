@@ -3,10 +3,12 @@ import { BsBell, BsXOctagonFill } from 'react-icons/bs'
 
 const Notify = () => {
     return (
-        <div className='bg-white w-full'>
+        <div className='bg-white w-full lg:p-1 p-2'>
 
-<h2 className="lg:text-2xl text-lg font-bold py-2 mb-6 active flex justify-start items-center gap-2">
-<BsBell /> Notifications</h2>
+            <h2 className="lg:text-xl text-lg font-bold py-2 mb-6 active flex justify-start items-center gap-2"
+            >
+            <BsBell /> Notifications
+            </h2>
 
             <div className='flex justify-start items-center gap-4 px-4 py-1 border-b-2 mb-2 border-yellow-600 bg-yellow-100 '>
                 <div className='w-1/8'>

@@ -108,12 +108,12 @@ const View_student = () => {
                     <td className="p-2 border flex justify-center items-center gap-4">
                       <button 
                       onClick={() => openModal1('studentId')}
-                      className="bg-yellow-500 text-white px-2 py-1 my-2 rounded">
+                      className="bg-yellow-500 text-white px-4 py-1 my-2 rounded-sm">
                         Edit
                       </button>
                       <button
                         onClick={() => openModal2('studentId')}
-                        className="bg-red-500 text-white px-2 py-1 rounded">
+                        className="bg-red-500 text-white px-2 py-1 rounded-sm">
                         Delete
                       </button>
                     </td>
