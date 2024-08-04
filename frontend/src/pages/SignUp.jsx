@@ -37,14 +37,14 @@ const SignUp = () => {
               <InputField name={"Enter School Address"} placeholder={"Address"} value={address} onChange type="text" icon={<BsGeoAltFill />} />
               <InputField name={"Enter Phone No."} placeholder={"Phone No"} value={phoneno} onChange type="text" icon={<BsPhone />} />
 
-              <select id="" className='bg-[#269CFF] my-4 w-full outline-none text-white py-2 px-4 rounded'>
+              <select id="" className='btn my-4 w-full outline-none text-white py-2 px-4 rounded'>
                 <option value="">Select an option</option>
                 <option value="option1">Option 1</option>
                 <option value="option2">Option 2</option>
                 
               </select>
 
-              <button type='submit' className='bg-[#269CFF] my-4 font-semibold w-full outline-none text-white py-2 px-4 rounded-full'
+              <button type='submit' className='btn my-4 font-semibold w-full outline-none text-white py-2 px-4 rounded-full'
               >Sign Up
               </button>
 

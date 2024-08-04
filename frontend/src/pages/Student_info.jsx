@@ -17,49 +17,54 @@ const StudentInfo = ({ id, closeModal }) => {
             onRequestClose={closeModal}
             className="modalcss md:h-fit h-screen overflow-scroll"
         >
-            <div className='p-4  bg-white w-full max-w-4xl mx-auto'>
+            <div className='p-4  bg-white w-full max-w-4xl mx-auto shadow-xl'>
                 <div className='w-full'>
                     <p className='text-xl font-semibold my-2 flex justify-start items-center active gap-2'>
                         <BsMortarboardFill /> Student Details
                     </p>
 
                     <div className='flex flex-col lg:flex-row justify-start items-center'>
-                        <div className='w-full lg:w-1/5 p-2'>
+                        <div className='w-full lg:w-1/5 p-2 rounded-full'>
                             <img
                                 src="https://cdn.vectorstock.com/i/preview-1x/34/20/smiling-graduate-student-vector-11443420.jpg"
-                                className='w-full h-full object-cover'
+                                className='w-full h-full object-cover rounded-full'
                                 alt="Student"
                             />
                         </div>
 
                         <div className='w-full lg:w-2/5 p-2'>
-                            <p className='text-md my-1 font-semibold text-blue-400'>Name:
+                            <p className='text-md my-1 font-semibold text-blue-400'>Name :  
                                 <span className='font-normal text-black'> firstName middleName sirName</span>
                             </p>
-                            <p className='text-md my-1 font-semibold text-blue-400'>Email:
+                            <p className='text-md my-1 font-semibold text-blue-400'>Email :  
                                 <span className='font-normal text-black'> admin@domainname.com</span>
                             </p>
-                            <p className='text-md my-1 font-semibold text-blue-400'>Contact:
-                                <span className='font-normal text-black'> +91 9191919919191</span>
+                            <p className='text-md my-1 font-semibold text-blue-400'>School City :  
+                                <span className='font-normal text-black'>Lorem ipsum dolor sit.</span>
                             </p>
-                            <p className='text-md my-1 font-semibold text-blue-400'>DOB:
-                                <span className='font-normal text-black'> 1/1/2000</span>
-                            </p>
-                            <p className='text-md my-1 font-semibold text-blue-400'>Current Class:
-                                <span className='font-normal text-black'> {arr[0].class} th</span>
+                            <p className='text-md my-1 font-semibold text-blue-400'>School Name :   
+                                <span className='font-normal text-black'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, distinctio.  </span>
                             </p>
                         </div>
 
                         <div className='w-full lg:w-2/5 p-2'>
-            
-                            <p className='text-md my-1 font-semibold text-blue-400'>Address:
-                                <span className='font-normal text-black'> aaaaaaa a aaaaaaaaaaaaaaa aa aaaaaaaaaaaa aa aaaaaaaaaaaaaaaaaa aaaaaaaaaaaaa</span>
+                            <p className='text-md my-1 font-semibold text-blue-400'>Current Class : 
+                                <span className='font-normal text-black'> {arr[0].class} th</span>
                             </p>
-                            <p className='text-md my-1 font-semibold text-blue-400'>Gender:
+                            <p className='text-md my-1 font-semibold text-blue-400'>Gender : 
                                 <span className='font-normal text-black'> Male</span>
                             </p>
-                            <p className='text-md my-1 font-semibold text-blue-400'>Parent Name:
+                            <p className='text-md my-1 font-semibold text-blue-400'>DOB : 
+                                <span className='font-normal text-black'> 1/1/2000</span>
+                            </p>
+                            <p className='text-md my-1 font-semibold text-blue-400'>Parent Name : 
                                 <span className='font-normal text-black'> middleName sirName</span>
+                            </p>
+                            <p className='text-md my-1 font-semibold text-blue-400'>Contact : 
+                                <span className='font-normal text-black'> +91 9191919919191</span>
+                            </p>
+                            <p className='text-md my-1 font-semibold text-blue-400'>Address : 
+                                <span className='font-normal text-black'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, rem!</span>
                             </p>
                         </div>
                     </div>
@@ -96,7 +101,7 @@ const StudentInfo = ({ id, closeModal }) => {
                     <button className='px-4 py-1 border-[1px] text-white bg-green-500 shadow-md'>
                         Save
                     </button>
-                    <button onClick={closeModal} className='bg-[#269CFF] text-white px-4 py-1 shadow-md'>
+                    <button onClick={closeModal} className='btn text-white px-4 py-1 shadow-md'>
                         Close
                     </button>
                 </div>

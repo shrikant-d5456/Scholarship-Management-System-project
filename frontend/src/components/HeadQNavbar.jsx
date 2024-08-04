@@ -40,7 +40,7 @@ const HQNavbar = () => {
   return (
     <>
       <div className='flex justify-center items-center text-sm'>
-        <div className='w-full bg-[#152259] text-white font-semibold flex justify-between items-center py-[8px] px-4 border-b-[1px] border-white'>
+        <div className='w-full bg-color-blue-dark text-white font-semibold flex justify-between items-center py-[8px] px-4 border-b-[1px] border-white'>
 
        
           <div className='flex text-lg items-center justify-center gap-2'>
@@ -74,7 +74,7 @@ const HQNavbar = () => {
     {/* side menu for mobile device */}
       {menu && (
         <div className='absolute w-full z-10'>
-          <div className='w-full h-screen bg-[#152259] text-white text-sm font-semibold'>
+          <div className='w-full h-screen bg-color-blue-dark text-white text-sm font-semibold'>
 
             {arr.map((element, index) => (
 

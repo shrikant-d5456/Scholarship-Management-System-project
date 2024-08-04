@@ -71,7 +71,7 @@ const TDashboard = () => {
       <Navbar />
 
       <div className='w-full flex text-black'>
-        <div className='md:block hidden w-[300px] h-screen bg-[#152259] text-white text-sm font-semibold'>
+        <div className='md:block hidden w-[300px] h-screen bg-color-blue-dark text-white text-sm font-semibold'>
           
           {arr.map((element,index)=>
           (

@@ -56,7 +56,7 @@ const Dashboard = () => {
       </h2>
       <hr />
 
-      <div className='p-4 bg-sky-100'>
+      <div className='p-4 bg-faint-orange'>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
           {array.map((element, index) => (
             <div key={index} className='bg-white flex justify-between items-center py-2 px-4 gap-2 rounded-sm shadow-sm'>
@@ -65,7 +65,7 @@ const Dashboard = () => {
                 <p className='text-lg font-semibold'>{element.value}</p>
               </div>
               <div>
-                {icons[element.icon] && React.createElement(icons[element.icon], { className: `text-xl ${element.color}` })}
+                {icons[element.icon] && React.createElement(icons[element.icon], { className: `text-2xl ${element.color}` })}
               </div>
             </div>
           ))}

@@ -13,25 +13,25 @@ const Upload_ans_sheet = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-4">
               <div>
                 <label className="block mb-2">Running Session</label>
-                <select className="w-full p-2 border rounded bg-sky-100">
+                <select className="w-full p-2 border rounded bg-faint-orange">
                   <option>2023-24</option>
                 </select>
               </div>
               <div>
                 <label className="block mb-2">Select Class</label>
-                <select className="w-full p-2 border rounded bg-sky-100">
+                <select className="w-full p-2 border rounded bg-faint-orange">
                   <option>Select Class</option>
                 </select>
               </div>
               <div>
                 <label className="block mb-2">Select Section</label>
-                <select className="w-full p-2 border rounded bg-sky-100">
+                <select className="w-full p-2 border rounded bg-faint-orange">
                   <option>Select Section</option>
                 </select>
               </div>
               <div>
                 <label className="block mb-2">Select School</label>
-                <select className="w-full p-2 border rounded bg-sky-100">
+                <select className="w-full p-2 border rounded bg-faint-orange">
                   <option>Select School</option>
                 </select>
               </div>
@@ -40,7 +40,7 @@ const Upload_ans_sheet = () => {
                 <input
                   type="number"
                   value="200"
-                  className="w-full p-2 border rounded bg-sky-100"
+                  className="w-full p-2 border rounded bg-faint-orange"
                   readOnly
                 />
               </div>
@@ -59,7 +59,7 @@ const Upload_ans_sheet = () => {
             </div>
             <div className="overflow-x-scroll w-full">
             <table className="md:w-full w-[800px] text-center bg-white">
-              <thead className="bg-sky-100">
+              <thead className="bg-faint-orange">
                   <tr>
                     <th className="p-2 border">Sr.No</th>
                     <th className="p-2 border">Full Name</th>
@@ -87,7 +87,7 @@ const Upload_ans_sheet = () => {
               </table>
             </div>
             <div className="mt-6 flex justify-end">
-            <button className="px-4 py-1 border border-transparent text-base font-medium rounded shadow-sm text-white bg-[#269CFF] hover:bg-[#008cff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            <button className="px-4 py-1 border border-transparent text-base font-medium rounded shadow-sm text-white btn">
                 Save Data
               </button>
             </div>

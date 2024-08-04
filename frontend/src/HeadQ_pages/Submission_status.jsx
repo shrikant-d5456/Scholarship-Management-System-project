@@ -30,25 +30,25 @@ const Submission_status = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-4">
               <div>
                 <label className="block mb-2">Running Session</label>
-                <select className="w-full p-2 border rounded bg-sky-100">
+                <select className="w-full p-2 border rounded bg-faint-orange">
                   <option>2023-24</option>
                 </select>
               </div>
               <div>
                 <label className="block mb-2">Select Class</label>
-                <select className="w-full p-2 border rounded bg-sky-100">
+                <select className="w-full p-2 border rounded bg-faint-orange">
                   <option>Select Class</option>
                 </select>
               </div>
               <div>
                 <label className="block mb-2">Select Month</label>
-                <select className="w-full p-2 border rounded bg-sky-100">
+                <select className="w-full p-2 border rounded bg-faint-orange">
                   <option>Select Month</option>
                 </select>
               </div>
               <div>
                 <label className="block mb-2">Select School</label>
-                <select className="w-full p-2 border rounded bg-sky-100">
+                <select className="w-full p-2 border rounded bg-faint-orange">
                   <option>Select School</option>
                 </select>
               </div>
@@ -57,7 +57,7 @@ const Submission_status = () => {
                 <input
                   type="number"
                   value="200"
-                  className="w-full p-2 border rounded bg-sky-100"
+                  className="w-full p-2 border rounded bg-faint-orange"
                   readOnly
                 />
               </div>
@@ -66,7 +66,7 @@ const Submission_status = () => {
 
             <div className="overflow-x-scroll w-full ">
               <table className="md:w-full w-[800px] my-8 text-center bg-white">
-                <thead className="bg-sky-100">
+                <thead className="bg-faint-orange">
                   <tr>
                     <th className="p-2 border"> Sr.No</th>
                     <th className="p-2 border"> School Name</th>

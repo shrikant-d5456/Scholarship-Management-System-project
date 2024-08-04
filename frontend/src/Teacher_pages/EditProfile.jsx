@@ -66,7 +66,7 @@ const EditProfile = () => {
                 <InputField name={"Phone No."} placeholder={"Phone No"} value={phoneno} onChange type="text" icon={<BsPhone />} />
             </div>
 
-            <button className='bg-[#269CFF] w-1/3 self-center px-4 py-2 text-white rounded-sm my-4 font-semibold'>Update</button>
+            <button className='btn w-1/3 self-center px-4 py-2 text-white rounded-sm my-4 font-semibold'>Update</button>
 
         </div>
     );

@@ -11,27 +11,56 @@ body{
 }
 
  /* #152259  dark blue */
- /* #269CFF active link */
+ /* #ff872b active link */
  /* #D7EAFF bg thin light blue */
 
+
+ 
+
+ /* Primary Color - #000a8d
+Secondary Color - #fd2824 */
+
+.text-color-blue{
+    color:  #01a2f9;
+}
+
+.bg-color-blue{
+    background-color: #01a2f9;
+}
+.bg-color-blue-dark{
+    background-color: #152259;
+}
+
+.text-color-orange{
+    color:  #ff872b;
+}
+
+.bg-faint-orange{
+    background-color: #ffead8;
+}
+
+
 .active{
-color: #269CFF;
-border-bottom:2px solid #269CFF;
+color: #01a2f9;
+border-bottom:2px solid #01a2f9;
 transition-duration: 1s;
 transition: all;
 transition-timing-function: ease-in;
 }
 
+
+
 .active2{
-    background-color: #269CFF;
+    color: white;
+    background-color: #ff872b;
     transition-duration: 1s;
     transition: all;
     transition-timing-function: ease-in;
     }
 
-.active3{
-        color: aliceblue;
-        background-color: #269CFF;
+.btn{
+        color: aliceblue ;
+        background-color: #01a2f9;
         transition-duration: 1s;
         transition: all;
         transition-timing-function: ease-in;
