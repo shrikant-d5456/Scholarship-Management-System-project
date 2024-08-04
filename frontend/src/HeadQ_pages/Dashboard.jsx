@@ -56,7 +56,7 @@ const Dashboard = () => {
       </h2>
       <hr />
 
-      <div className='p-4 bg-faint-orange'>
+      <div className='lg:p-4 p-2 bg-faint-orange'>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
           {array.map((element, index) => (
             <div key={index} className='bg-white flex justify-between items-center py-2 px-4 gap-2 rounded-sm shadow-sm'>
