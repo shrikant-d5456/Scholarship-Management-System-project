@@ -26,7 +26,7 @@ const Header = () => {
           </button>
           <Link to="/">
 
-            <div className='flex justify-start items-center gap-2 w-full text-md font-serif'>
+            <div className='flex justify-start items-center gap-2 w-full text-sm font-serif'>
               <span onClick={() => setMenu(false)} className='flex w-8 h-8 rounded-full' title='Edit Profile'>
                 <img className='w-full h-full object-cover rounded-full' src={logo} alt="admin" />
               </span>
