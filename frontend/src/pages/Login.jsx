@@ -29,15 +29,14 @@ const Login = () => {
               <InputField name={"Enter Password"} placeholder={"Password"} value={password} onChange type="text" icon={<BsKeyFill />} />
 
               <select id="" className='btn my-4 w-full outline-none text-white py-2 px-4 rounded'>
-<<<<<<< HEAD
+
                 <option value="">Select an option</option>
                 <option value="option1">Teacher or Principle</option>
                 <option value="option2">Headquarter</option>
                
-=======
+
                 <option value="option1">Teacher or Principle</option>
                 <option value="option2">Headquarter</option>
->>>>>>> f997c3630580a85a83e9246edbedce5b80904419
               </select>
 
              
