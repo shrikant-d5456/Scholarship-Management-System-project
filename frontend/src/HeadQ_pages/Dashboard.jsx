@@ -43,7 +43,7 @@ const Dashboard = () => {
     },
     {
       label_name: " Scholarship % of previous months ",
-      value: 200,
+      value: 100%,
       icon: "BsMortarboardFill",
       color: "text-blue-700"
     },
