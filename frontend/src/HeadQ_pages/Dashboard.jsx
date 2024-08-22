@@ -169,7 +169,7 @@ const Notice = () => {
       </div>
 
    
-        <marquee direction="up" scrollamount="2"  className="relative h-[60vh] " >
+        <marquee direction="up" scrollamount="2"  className="relative h-[450px] " >
         {notices.map((notice, index) => (
           
           <div key={index} className=' w-full my-1 flex gap-2 justify-start items-center border-b-2 py-1'>
