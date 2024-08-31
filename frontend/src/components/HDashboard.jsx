@@ -7,6 +7,7 @@ import DetailsReport from '../HeadQ_pages/DetailsReports'
 import Submission_status from '../HeadQ_pages/Submission_status';
 import EditProfile from '../Teacher_pages/EditProfile';
 import Notify from '../Teacher_pages/Notify';
+import NotFoundPage from '../NotFoundPage';
 
 
 const HDashboard = () => {
@@ -83,6 +84,7 @@ const HDashboard = () => {
             <Route path="/submission_status" element={<Submission_status />} />
             <Route path="/edit_profile" element={<EditProfile />} />
             <Route path="/notify" element={<Notify />} />
+             <Route path="/*" element={<NotFoundPage />} />
           </Routes>
         </div>
       </div>
