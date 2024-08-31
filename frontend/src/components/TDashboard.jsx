@@ -10,6 +10,7 @@ import View_student from '../Teacher_pages/View_student';
 import Dashboard from '../HeadQ_pages/Dashboard';
 import EditProfile from '../Teacher_pages/EditProfile';
 import Notify from '../Teacher_pages/Notify';
+import NotFoundPage from '../NotFoundPage';
 
 
 const TDashboard = () => {
@@ -101,7 +102,7 @@ const TDashboard = () => {
             <Route path="/view_students" element={<View_student />} />
             <Route path="/edit_profile" element={<EditProfile />} />
             <Route path="/notify" element={<Notify />} />
-
+             <Route path="/*" element={<NotFoundPage />} />
           </Routes>
         </div>
       </div>
