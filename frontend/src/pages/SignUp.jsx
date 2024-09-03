@@ -29,7 +29,7 @@ const SignUp = () => {
 
               <p className='text-2xl font-bold text-[#269CFF]'>Sign Up</p> <hr className='lg:hidden block my-4 border-[#269CFF]' />  
 
-              <InputField name={"Enter your Username"} placeholder={"UserName"} value={username} onChange type="text" icon={<BsPersonFillLock />} />
+              <InputField name={"Enter your Username or Teacher ID"} placeholder={"username or Teacher ID"} value={username} onChange type="text" icon={<BsPersonFillLock />} />
               <InputField name={"Email"} placeholder={"Email"} value={email} onChange type="text" icon={<BsEnvelopeArrowUpFill />} />
               <InputField name={"Enter Password"} placeholder={"Password"} value={password} onChange type="text" icon={<BsKeyFill />} />
 
