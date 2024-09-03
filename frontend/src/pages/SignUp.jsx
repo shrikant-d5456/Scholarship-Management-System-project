@@ -39,8 +39,8 @@ const SignUp = () => {
 
               <select id="" className='btn my-4 w-full outline-none text-white py-2 px-4 rounded'>
                 <option value="">Select an option</option>
-                <option value="Teacher Or Principal">Teacher Or Principal</option>
-                <option value="Headquarter ">Headquarter</option>
+                <option value="teacher">Teacher Or Principal</option>
+                <option value="headquarter">Headquarter</option>
                 
               </select>
 
