@@ -31,13 +31,11 @@ const Login = () => {
               <select id="" className='btn my-4 w-full outline-none text-white py-2 px-4 rounded'>
 
                 <option value="">Select an option</option>
-                <option value="option1">Teacher or Principle</option>
-                <option value="option2">Headquarter</option>
+                <option value="teacher">Teacher or Principle</option>
+                <option value="headquarter ">Headquarter</option>
                
 
-                <option value="option1">Teacher or Principle</option>
-                <option value="option2">Headquarter</option>
-              </select>
+               
 
              
               <button type='submit' className='btn my-4 font-semibold w-full outline-none text-white py-2 px-4 rounded-full'
