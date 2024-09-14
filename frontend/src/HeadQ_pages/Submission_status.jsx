@@ -7,13 +7,13 @@ const Submission_status = () => {
     {
       name: 'School name',
       submission: "140/140",
-      status: 'complited',
+      status: 'completed',
       reason: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
     {
       name: 'School name',
       submission: "140/140",
-      status: 'complited',
+      status: 'completed',
       reason: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
   ]
