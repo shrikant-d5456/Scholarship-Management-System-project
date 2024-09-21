@@ -70,6 +70,13 @@ const Header = () => {
                   </Link>
                 </>
               )}
+              <select id="" className='btn w-fit outline-none text-white py-1 px-2 '>
+                <option value="">Change Language</option>
+                <option value="eng">English</option>
+                <option value="mr">Marathi</option>
+                <option value="hn">Hindi</option>
+                
+              </select>
           </ul>
         </div>
 
@@ -84,6 +91,13 @@ const Header = () => {
         >
           <ul className='flex flex-col gap-2 '>
 
+          <select id="" className='btn w-full outline-none text-white py-1 px-2 '>
+                <option value="">Change Language</option>
+                <option value="eng">English</option>
+                <option value="mr">Marathi</option>
+                <option value="hn">Hindi</option>
+                
+              </select>
             {/* here check user is teacher  */}
             {if_user_exist ? (
               <>
