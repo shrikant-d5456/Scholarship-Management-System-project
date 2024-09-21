@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { BsPersonFillLock,BsKeyFill,BsEnvelopeArrowUpFill, BsGeoAltFill, BsBank, BsPhone } from 'react-icons/bs'
 import img1 from "../assets/bgimg.jpg"
-
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
 
@@ -48,6 +48,8 @@ const SignUp = () => {
               >Sign Up
               </button>
 
+              <p>Already you have an account ? <Link to="/" className='text-blue-500 underline'>Login</Link> </p>
+              
 
             </form>
           </div>
