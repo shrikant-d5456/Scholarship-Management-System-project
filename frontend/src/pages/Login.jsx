@@ -33,7 +33,7 @@ const Login = () => {
                 <option value="">Select an option</option>
                 <option value="teacher">Teacher or Principle</option>
                 <option value="headquarter ">Headquarter</option>
-               <select/>
+              </select>
 
                
 
