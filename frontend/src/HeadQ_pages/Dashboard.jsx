@@ -50,16 +50,16 @@ const Dashboard = () => {
   ];
 
   const topStudent = [
-    { studentName: "Alice Johnson", schoolName: "Greenwood High School" },
-    { studentName: "Michael Brown", schoolName: "Sunrise Academy" },
-    { studentName: "Sophia Davis", schoolName: "Riverside Public School" },
-    { studentName: "James Wilson", schoolName: "Hilltop School" },
-    { studentName: "Emily Martinez", schoolName: "Blue Valley School" },
-    { studentName: "Oliver Garcia", schoolName: "Meadowbrook High" },
-    { studentName: "Ava Robinson", schoolName: "Pinecrest School" },
-    { studentName: "William Clark", schoolName: "Lakeside Academy" },
-    { studentName: "Isabella Lee", schoolName: "Silver Oak School" },
-    { studentName: "Liam Walker", schoolName: "Sunnydale High" }
+    { studentName: "सागर देशमुख", schoolName: "श्री समर्थ विद्यालय" },
+    { studentName: "पायल जाधव", schoolName: "विद्या मंदिर इंग्लिश स्कूल" },
+    { studentName: "प्रियांका शिंदे", schoolName: "शारदा विद्यालय" },
+    { studentName: "ओमकार भोसले", schoolName: "महात्मा गांधी विद्यालय" },
+    { studentName: "स्नेहा पाटील", schoolName: "स्वामी विवेकानंद स्कूल" },
+    { studentName: "रोहन चौधरी", schoolName: "शिवाजी विद्यालय" },
+    { studentName: "मिताली इनामदार", schoolName: " आदर्श इंग्लिश मीडियम स्कूल" },
+    { studentName: "अर्जुन पवार", schoolName: "जय हिंद विद्यालय" },
+    { studentName: "पायल पाटील", schoolName: "शारदा विद्यालय" },
+    { studentName: "कविता माळी", schoolName: "नवजीवन विद्यालय" }
   ];
 
 
