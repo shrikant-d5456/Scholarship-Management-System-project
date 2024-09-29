@@ -7,7 +7,6 @@ from portal.base import BaseModel
 from django.contrib.auth.models import User
 from schools.models import Schools
 
-
 class User(AbstractBaseUser):
     id        = models.UUIDField(primary_key=True, default=uuid4)
     username = models.CharField(max_length=128, unique=True, blank=True)
