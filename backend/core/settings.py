@@ -141,32 +141,32 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = "accounts.User"
+# AUTH_USER_MODEL = "accounts.User"
 
-CORS_ALLOW_HEADERS = [
-    "*",
-]
+# CORS_ALLOW_HEADERS = [
+#     "*",
+# ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
 
-EMAIL_HOST_USER = env("EMAIL_HOST_USER")
-EMAIL_HOST_NAME = env("EMAIL_HOST_NAME")
-EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
-EMAIL_HOST = env("EMAIL_HOST")
-EMAIL_PORT = env("EMAIL_PORT")
+# EMAIL_HOST_USER = env("EMAIL_HOST_USER")
+# EMAIL_HOST_NAME = env("EMAIL_HOST_NAME")
+# EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
+# EMAIL_HOST = env("EMAIL_HOST")
+# EMAIL_PORT = env("EMAIL_PORT")
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS=True
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_USE_TLS=True
 
-MSG91_AUTH_KEY = env('MSG91_AUTH_KEY')
-OTP_TEMPLATE_ID = env('OTP_TEMPLATE_ID')
-COUNTRY_CODE_MOBILE = env('COUNTRY_CODE_MOBILE')
+# MSG91_AUTH_KEY = env('MSG91_AUTH_KEY')
+# OTP_TEMPLATE_ID = env('OTP_TEMPLATE_ID')
+# COUNTRY_CODE_MOBILE = env('COUNTRY_CODE_MOBILE')
 
-CRONJOBS = [
-    ('*/1 * * * *', 'myapp.cron.my_scheduled_job')
-]
+# CRONJOBS = [
+#     ('*/1 * * * *', 'myapp.cron.my_scheduled_job')
+# ]
 
-CASHFREE_CLIENT_ID = env('CASHFREE_CLIENT_ID')
-CASHFREE_CLIENT_SECRET = env('CASHFREE_CLIENT_SECRET')
+# CASHFREE_CLIENT_ID = env('CASHFREE_CLIENT_ID')
+# CASHFREE_CLIENT_SECRET = env('CASHFREE_CLIENT_SECRET')

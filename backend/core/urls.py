@@ -9,7 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/get-charged-battery/', getchargedbattery),
     path('api/open-empty-slot/', openEmptySlot),
-    
+
     path('api/accounts/', include('accounts.urls')),
 ]
 
