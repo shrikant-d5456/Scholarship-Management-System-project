@@ -2,13 +2,17 @@ import React, { useState } from "react";
 import { BsPersonVcardFill } from "react-icons/bs";
 import Delete from "../pages/Delete";
 import Student_info from "../pages/Student_info";
+import Select from "../pages/Select";
 
 const View_student = () => {
 
   const [modalIsOpen1, setIsOpen1] = useState(false);
   const [modalIsOpen2, setIsOpen2] = useState(false);
+  const [inp, setInp] = useState("");
 
   const [studentId, setStudentId] = useState(null);
+  const options = ["111101","1110101","10101010","101010"];
+
 
 
   const openModal1 = (id) => {
@@ -26,8 +30,8 @@ const View_student = () => {
       <div className="flex flex-col md:flex-row">
         <main className="flex-1">
           <div className="bg-white p-4 rounded shadow">
-          <h2 className="lg:text-2xl text-lg font-bold py-2 mb-6 active flex justify-start items-center gap-2">
-          <BsPersonVcardFill /> Student View
+            <h2 className="lg:text-2xl text-lg font-bold py-2 mb-6 active flex justify-start items-center gap-2">
+              <BsPersonVcardFill /> Student View
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-4">
               <div>
@@ -64,16 +68,20 @@ const View_student = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col md:flex-row justify-between mb-4">
-              <input
-                type="text"
-                placeholder="Search Student Name"
-                className="p-2 border rounded mb-2 md:mb-0 md:mr-2 flex-1"
+            <div className="flex flex-col md:flex-row justify-between mb-4 gap-2">
+            <Select
+                className=" w-full"
+                options={options}
+                placeholder="Search Name"
+                inp={inp}
+                setInp={setInp}
               />
-              <input
-                type="text"
-                placeholder="Search Roll No."
-                className="p-2 border rounded flex-1"
+              <Select
+                className=" w-full"
+                options={options}
+                placeholder="Search Roll Number"
+                inp={inp}
+                setInp={setInp}
               />
             </div>
             <div className="overflow-x-scroll w-full">
@@ -106,9 +114,9 @@ const View_student = () => {
                     <td className="p-2 border">Address any</td>
                     <td className="p-2 border">Gender</td>
                     <td className="p-2 border flex justify-center items-center gap-4">
-                      <button 
-                      onClick={() => openModal1('studentId')}
-                      className="bg-yellow-500 text-white px-4 py-1 my-2 rounded-sm">
+                      <button
+                        onClick={() => openModal1('studentId')}
+                        className="bg-yellow-500 text-white px-4 py-1 my-2 rounded-sm">
                         Edit
                       </button>
                       <button

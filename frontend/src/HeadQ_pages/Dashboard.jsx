@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BsGrid1X2Fill, BsMortarboardFill, BsPersonLinesFill, BsHourglassSplit, BsCheckCircleFill, BsFileXFill, BsChatText, BsTrash, BsPlusCircle, BsPlusCircleFill, BsSend, BsSendFill } from 'react-icons/bs';
+import Modal from "react-modal"
 
 const Dashboard = () => {
   const icons = {
@@ -122,33 +123,35 @@ const Dashboard = () => {
 export default Dashboard;
 
 
-
-
 const Notice = () => {
-
   const [add, setAdd] = useState(false);
+  const [file, setFile] = useState(null);
   const [notice, setNotice] = useState('');
   const [notices, setNotices] = useState([
-    'नोंदणीची अंतिम तारीख: सर्व विद्यार्थ्यांनी 15 जून 2024 पूर्वी शिष्यवृत्ती परीक्षेसाठी नोंदणी पूर्ण करावी. उशिराने आलेल्या नोंदणी फॉर्मचा स्वीकार केला जाणार नाही.',
-    'पात्रता निकष: महाराष्ट्रातील निवडलेल्या 150 शाळांमधील केवळ इयत्ता 8 वीचे विद्यार्थी या परीक्षेस पात्र आहेत.',
-    'अभ्यासक्रम: शिष्यवृत्ती परीक्षा इयत्ता 8 वीच्या पाठ्यक्रमावर आधारित असेल. यामध्ये गणित, विज्ञान आणि सामान्य ज्ञान यांचा समावेश असेल.',
-    'परीक्षेची तारीख: शिष्यवृत्ती परीक्षा 30 जून 2024 रोजी आयोजित केली आहे. विद्यार्थ्यांनी परीक्षा केंद्रावर परीक्षेच्या 30 मिनिटे अगोदर उपस्थित रहावे.',
-    'प्रवेशपत्र: प्रवेशपत्र 25 जून 2024 पासून डाउनलोड करण्यासाठी उपलब्ध असतील. परीक्षेच्या दिवशी विद्यार्थ्यांनी प्रवेशपत्रासोबत वैध शाळेचा ओळखपत्र बरोबर आणणे आवश्यक आहे.',
-    'उत्तरपत्रिका स्वरूप: उत्तरपत्रिका OMR आधारित असेल. उत्तरपत्रिकेत फक्त काळ्या किंवा निळ्या बॉलपॉईंट पेनचा वापर करावा.',
-    'सराव परीक्षा: सराव परीक्षा ऑनलाईन उपलब्ध असतील. विद्यार्थी त्यांच्या तयारीसाठी मॉक टेस्ट देण्याचे प्रोत्साहन दिले जाते.',
-    'शिष्यवृत्ती पुरस्कार: परीक्षेतील सर्वोत्तम कामगिरी करणाऱ्या विद्यार्थ्यांना शिष्यवृत्ती प्रदान केली जाईल. पुरस्कारांची माहिती परीक्षा झाल्यानंतर जाहीर केली जाईल.',
-    'निकाल: निकाल 10 जुलै 2024 रोजी जाहीर केला जाईल आणि अधिकृत पोर्टलवर प्रकाशित केला जाईल.',
-    'सहाय्यता केंद्र: परीक्षा किंवा नोंदणी प्रक्रियेबद्दल कोणत्याही शंका किंवा तांत्रिक सहाय्यासाठी, विद्यार्थी [संपर्क क्रमांक] वर संपर्क साधू शकतात.',
+    {
+      notice:
+        'नोंदणीची अंतिम तारीख: सर्व विद्यार्थ्यांनी 15 जून 2024 पूर्वी शिष्यवृत्ती परीक्षेसाठी नोंदणी पूर्ण करावी. उशिराने आलेल्या नोंदणी फॉर्मचा स्वीकार केला जाणार नाही.',
+      file: '',
+    },
   ]);
 
+
+  const handleFileUpload = (e) => {
+    setFile(e.target.files[0]);
+  };
+
   const handleSend = () => {
-    if (notice.trim() !== "") {
-      setNotices([...notices, notice]);
-      setNotice('');
-      setAdd(false);
-    } else {
-      alert("Please enter a notice before sending!");
+    if (!file && notice.trim() === '') {
+      alert('Please enter a notice or upload a file before sending!');
+      return;
     }
+
+    const fileUrl = file ? URL.createObjectURL(file) : '';
+
+    setNotices([...notices, { notice, file: fileUrl }]);
+    setNotice('');
+    setAdd(false);
+    setFile(null);
   };
 
   const handleDelete = (index) => {
@@ -157,53 +160,86 @@ const Notice = () => {
 
   return (
     <>
-      <div className='flex justify-between items-center p-2 active2 font-semibold overflow-hidden'>
-        {add ? (
-          <textarea
-            placeholder='Enter Notice Here..'
-            value={notice}
-            onChange={(e) => setNotice(e.target.value)}
-            className='w-full p-1 font-normal outline-none h-[40px] text-black'
-          />
-        ) : (
-          <p>Notice Board</p>
-        )}
-        {add ? (
-          <p onClick={handleSend} className='cursor-pointer font-semibold text-lg flex justify-end mx-2 p-1'><BsSendFill/></p>
-        ) : (
-          <p onClick={() => setAdd(true)} className='cursor-pointer font-semibold text-xl'><BsPlusCircleFill/></p>
+      <div className="flex justify-between items-center p-1 active2 font-semibold overflow-hidden">
+        <p>Notice Board</p>
+        <p
+          onClick={() => setAdd(true)}
+          className="cursor-pointer font-semibold text-lg flex justify-end mx-2 p-1"
+        >
+          <BsPlusCircleFill />
+        </p>
+
+        {add && (
+          <Modal
+            isOpen={true}
+            className="modalcss md:h-fit h-screen overflow-scroll"
+          >
+            <textarea
+              placeholder="Enter Notice Here.."
+              value={notice}
+              onChange={(e) => setNotice(e.target.value)}
+              className="w-full p-1 font-normal outline-none border-[1px] border-black h-[40px] text-black"
+            />
+            <br />
+            <p className="font-semibold my-2">Upload Notice Here:</p>
+            <input type="file" onChange={handleFileUpload} />
+
+            <div className="flex justify-end my-4 gap-4">
+              <button
+                onClick={handleSend}
+                className="px-4 py-1 border-[1px] text-white bg-green-500 shadow-md"
+              >
+                Hosted
+              </button>
+              <button
+                onClick={() => setAdd(false)}
+                className="btn text-white px-4 py-1 shadow-md"
+              >
+                Close
+              </button>
+            </div>
+          </Modal>
         )}
       </div>
 
-   
-        <marquee direction="up" scrollamount="2"  className="relative h-[450px] " >
-        {notices.map((notice, index) => (
-          
-          <div key={index} className=' w-full my-1 flex gap-2 justify-start items-center border-b-2 py-1'>
-            <div className='w-[45px] h-[40px] rounded-full flex justify-center items-center'>
-              <BsChatText className='text-xl text-yellow-400' />
+      <marquee
+        direction="up"
+        scrollamount="1"
+        className="relative h-[450px]"
+      >
+        {notices.map((item, index) => (
+          <div
+            key={index}
+            className=" w-full my-1 flex gap-2 justify-start items-center border-b-2 py-1"
+          >
+            <div className="w-[45px] h-[40px] rounded-full flex justify-center items-center">
+              <BsChatText className="text-xl text-yellow-400" />
             </div>
 
-            <div className='w-full'>
-              <p className=''>{notice}</p>
-              <div className='flex justify-end items-center mx-4'>
+            <div className="w-full">
+              <p>{item.notice}</p>
+              {item.file && (
+                <a
+                  href={item.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline"
+                >
+                  View PDF
+                </a>
+              )}
+              <div className="flex justify-end items-center mx-4">
                 <BsTrash
-                  className='text-xl text-red-500 cursor-pointer'
+                  className="text-xl text-red-500 cursor-pointer"
                   onClick={() => handleDelete(index)}
                 />
               </div>
-              
-          
-          </div>
-            
-            
-
+            </div>
           </div>
         ))}
-        </marquee>
-     
+      </marquee>
+
+      
     </>
   );
-
-}
-
+};
