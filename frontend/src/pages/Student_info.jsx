@@ -1,6 +1,6 @@
 import React from 'react'
 import { BsMortarboardFill } from 'react-icons/bs';
-import Modal from 'react-modal';
+import Modal from "react-modal";
 
 const StudentInfo = ({ id, closeModal }) => {
     const arr = [

@@ -1,6 +1,8 @@
 import './index.css'
 import Layout from './components/Layout'
 
+import './Language.jsx'
+
 function App() {
 
   return (
