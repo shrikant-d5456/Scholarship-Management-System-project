@@ -29,7 +29,7 @@ const Header = () => {
                 <span onClick={() => setMenu(false)} className='flex w-8 h-8 rounded-full' title='Edit Profile'>
                   <img className='w-full h-full object-cover rounded-full' src={logo} alt="admin" />
                 </span>
-                Swaami Vivekanand Shikshan Sanstha {t('welcome_message')}
+                {t('logo_name')}
               </div>
             </Link>
           </div>
@@ -86,9 +86,7 @@ const Header = () => {
                 className='btn w-full outline-none text-white py-1 px-2'
                 onChange={(e) => changeLanguage(e.target.value)} // Change language on select
               >
-                <option value="">Change Language</option>
                 <option value="en">English</option>
-                <option value="fr">French</option>
                 <option value="mr">Marathi</option>
                 <option value="hn">Hindi</option>
               </select>
