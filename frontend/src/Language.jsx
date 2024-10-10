@@ -6,20 +6,19 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   en: {
     translation: {
-      welcome_message: "Welcome to our application!",
-      description: "This is a simple example of dynamic language switching."
+      logo_name: "Swaami Vivekanand Shikshan Sanstha ",
     }
   },
   mr: {
     translation: {
-      welcome_message: "Bienvenue dans notre application!",
-      description: "Ceci est un exemple simple de changement de langue dynamique."
+      logo_name: "स्वामी विवेकानंद शिक्षण संस्था ",
+      
     }
   },
   hn: {
     translation: {
-      welcome_message: "hey dans notre application!",
-      description: "Ceci est un exemple simple de changement de langue dynamique."
+      logo_name: "स्वामी विवेकानंद शिक्षण संस्था ",
+      
     }
   }
 };
